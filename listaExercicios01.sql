@@ -42,4 +42,11 @@ FROM autores
 LEFT JOIN livros ON autores.id = livros.autor_id
 GROUP BY autores.nome;
 
+7. Agrupe os alunos por curso e conte quantos alunos estão matriculados em cada curso:
+
+sql
+SELECT curso, COUNT(aluno_id) AS numero_de_alunos
+FROM matriculas
+GROUP BY curso;
+
 
