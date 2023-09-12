@@ -64,6 +64,15 @@ FROM vendas
 GROUP BY produto
 HAVING receita_total > 10000;
 
+10. Determine os autores que têm mais de 2 livros publicados:
+
+sql
+SELECT autores.nome, COUNT(livros.id) AS numero_de_livros
+FROM autores
+LEFT JOIN livros ON autores.id = livros.autor_id
+GROUP BY autores.nome
+HAVING numero_de_livros > 2;
+
 
 
 
