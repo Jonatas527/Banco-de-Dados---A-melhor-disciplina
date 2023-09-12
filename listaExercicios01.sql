@@ -56,5 +56,15 @@ SELECT produto, AVG(receita) AS media_de_receita
 FROM vendas
 GROUP BY produto;
 
+9. Encontre os produtos que geraram uma receita total superior a $10.000:
+
+sql
+SELECT produto, SUM(receita) AS receita_total
+FROM vendas
+GROUP BY produto
+HAVING receita_total > 10000;
+
+
+
 
 
