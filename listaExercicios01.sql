@@ -49,4 +49,12 @@ SELECT curso, COUNT(aluno_id) AS numero_de_alunos
 FROM matriculas
 GROUP BY curso;
 
+8. Liste a média de receita para cada produto:
+
+sql
+SELECT produto, AVG(receita) AS media_de_receita
+FROM vendas
+GROUP BY produto;
+
+
 
